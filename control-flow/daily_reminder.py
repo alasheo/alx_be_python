@@ -1,27 +1,17 @@
-def daily_reminder():
-    # Prompt for a single task
-    task = input("Enter your task: ")
-    priority = input("Priority (high/medium/low): ").strip().lower()
-    time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
+# pattern_drawing.py
 
-    # Process the task based on priority
-    match priority:
-        case 'high':
-            reminder = f"'{task}' is a high priority task"
-        case 'medium':
-            reminder = f"'{task}' is a medium priority task"
-        case 'low':
-            reminder = f"'{task}' is a low priority task"
-        case _:
-            reminder = f"'{task}' has an undefined priority level"
+# Prompt the user to enter a positive integer for the pattern size
+size = int(input("Enter the size of the pattern: "))
 
-    # Modify the reminder if the task is time-bound
-    if time_bound == 'yes':
-        reminder += " that requires immediate attention today!"
-
-    # Provide a customized reminder
-    print(f"Reminder: {reminder}")
-
-if __name__ == "__main__":
-    daily_reminder()
+# Ensure the input is a positive integer
+if size > 0:
+    # Initialize the row counter
+    row = 0
+    while row < size:  # Iterate through each row
+        for col in range(size):  # For each column in the current row
+            print("*", end="")  # Print asterisks on the same line
+        print()  # Move to the next line after completing the row
+        row += 1  # Increment the row counter
+else:
+    print("Invalid input. Please enter a positive integer.")
 
