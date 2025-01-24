@@ -23,8 +23,10 @@ class BankAccount:
         if amount > 0:
             if amount <= self.__account_balance:
                 self.__account_balance -= amount
+                print(f"Withdrew: ${amount:.1f}")
                 return True
             else:
+                print("Insufficient funds.")
                 return False
         else:
             print("Withdrawal amount must be positive.")
@@ -39,3 +41,6 @@ class BankAccount:
 # Example usage - depositing only once
 account = BankAccount(100)
 account.deposit(67)
+account.withdraw(50)
+account.withdraw(150)
+account.display_balance()
