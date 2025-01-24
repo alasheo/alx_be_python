@@ -36,6 +36,6 @@ class BankAccount:
         """
         print(f"Current Balance: ${self.__account_balance:.2f}")
 
-# Example usage
+# Example usage - depositing only once
 account = BankAccount(100)
 account.deposit(67)
