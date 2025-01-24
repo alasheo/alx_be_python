@@ -3,7 +3,7 @@ class BankAccount:
         """
         Initialize the BankAccount with an optional initial balance.
         """
-        self.__account_balance = initial_balance  # Fixed typo
+        self.__account_balance = initial_balance
 
     def deposit(self, amount):
         """
@@ -11,6 +11,7 @@ class BankAccount:
         """
         if amount > 0:
             self.__account_balance += amount
+            print(f"Deposited: ${amount:.1f}")
         else:
             print("Deposit amount must be positive.")
 
@@ -37,6 +38,4 @@ class BankAccount:
 
 # Example usage
 account = BankAccount(100)
-account.deposit(50)
-account.withdraw(30)
-account.display_balance()
+account.deposit(67)
