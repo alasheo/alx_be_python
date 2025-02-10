@@ -4,7 +4,7 @@
 weather_con = input("What's the weather like today? (sunny/rainy/cold): ")
 
 # Provide recommendations based on the weather condition
-if weather_con == "Sunny":
+if Weather_con == "Sunny":
     print("Wear a t-shirt and sunglasses.")
 elif weather_con == "rainy":
     print("Don't forget your umbrella and a raincoat.")
